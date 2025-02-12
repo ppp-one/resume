@@ -1,0 +1,193 @@
+\documentclass[8pt, a4paper]{article}
+\usepackage[footskip=0.5cm, 
+    top=2cm,      % Reduce top margin
+    bottom=1.9cm,   % Reduce bottom margin
+    left=2.5cm,     % Reduce left margin
+    right=2.5cm,    % Reduce right margin
+]{geometry}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{hyperref}
+% \usepackage{showframe}  % Add this line to show margins
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{tikz}
+% \setlist{nolistsep}
+\setlist[itemize]{left=0.1em..1em, itemsep=0.1em, topsep=0.1em, parsep=0.1em}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+\newcommand{\skillrating}[2]{%
+    #1 ~~
+    \foreach \i in {1,...,5} {%
+        \tikz[baseline=-0.25em, scale=0.35] \draw[fill=black!\ifnum\i>#2 5\else 75\fi] (0,0) circle (4pt);
+    } \hspace{0.5em} % Add some space after the rating
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,    
+    urlcolor=black,
+}
+
+\setlength\extrarowheight{10pt}
+\setlength\parindent{0pt}
+\pagenumbering{gobble}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+\begin{document}
+\small
+
+\begin{center}
+    {\huge Peter Pihlmann Pedersen} \\
+    \vspace{0.1cm}
+    {\small\color{black!40}{Astrophysicist, Research Software \& Hardware Engineering}} \\
+    \vspace{0.35cm}
+    {\faEnvelope\hspace{2pt}  \href{mailto:peter@ppp.one}{peter@ppp.one} 
+    \hspace{8pt} 
+    \href{https://github.com/ppp-one}{\faGithub\hspace{2pt}ppp-one}}
+    \hspace{8pt}
+    {\faGlobe\hspace{2pt} \href{https://www.ppp.one/}{ppp.one}}
+\end{center}
+
+% structure of block
+\newcommand{\block}[5]{
+    \makecell[tr]{{\color{black!70}\textbf{#2}}\\{\color{black!50}#1}}& 
+    \makecell[tl]{{\color{black!80}\textbf{#3}} \hspace{0pt} {\color{black!40}#4} \\ \parbox[t]{10cm}{#5}}
+}
+
+% structure of skill block
+\newcommand{\blockskill}[2]{
+    \makecell[tr]{{\color{black!50}#1}}& 
+    \makecell[tl]{\parbox[t]{10cm}{#2}}
+}
+
+\newcommand{\header}[1]{{\color{black!60}\large\MakeUppercase{\textbf{#1}}}}
+
+\newcommand{\blockhead}[2]{\begin{center}\header{#1}{#2}\end{center}}
+
+\newcommand{\indice}[1]{\color{black!40}\small\textit{#1}}
+
+
+\newenvironment{blocks}[1][1.3]
+{\bgroup
+    \def\arraystretch{#1}
+    \setstretch{#1}
+    \begin{tabular}{@{}p{5cm}r}}
+        {\end{tabular}
+    \egroup
+    \vspace{.3cm}
+}
+
+\vspace{0.8cm}
+
+\blockhead{Positions}{}
+\begin{blocks}[0.9]
+    \block{2022 -- now}{Postdoctoral Researcher}{ETH Zurich}{Switzerland}{
+        \vspace{-\topsep} 
+        \begin{itemize}
+            \item Developing robotic observatory control software, hardware, data processing/visualization tools for SPECULOOS and the ETH observatory
+            \item Leading advancements in high-precision near-infrared photometry and instrumentation to detect and characterise new exoplanets
+            \item Supervising Masters research projects (5 completed)
+        \end{itemize}
+    }\\
+    \block{2018 -- now}{Co-founder}{\href{https://www.open-seneca.org/}{open-seneca \ExternalLink}}{United Kingdom}{
+        \vspace{-\topsep}
+        \begin{itemize}
+            \item Engineered air quality monitoring networks -- developed core aspects of the hardware, software, and data analysis
+            \item Led international collaborative projects, with a focus on the Global South
+        \end{itemize}
+    }\\
+\end{blocks}
+
+% horizontal line
+\begin{center}
+    \noindent\color{black!50}\rule{.75\textwidth}{0.4pt}
+\end{center}
+
+\blockhead{Education}{}
+\begin{blocks}[0.9]
+    \block{2018 -- 2022}{PhD}{University of Cambridge}{United Kingdom}{Near-infrared instrumentation for robotic exoplanet transit surveys\\
+        \indice{Supervisor: \href{https://en.wikipedia.org/wiki/Didier_Queloz}{Didier Queloz~ \ExternalLink}}}\\
+    \block{2017 -- 2018}{Masters}{University of Cambridge}{United Kingdom}{Sensing Technologies\\
+        \indice{Electives: Embedded Systems,~ Computer Vision and Robotics,~ Image Processing and Image Coding,~ Electronic Sensors and Instrumentation}}\\
+    % \block{2013 -- 2017}{Bachelor + Masters}{University of Manchester}{United Kingdom}{Physics, First Class Honours\\\indice{Electives: Maths of Waves and Fields,~ Advanced Dynamics,~ Wave Optics}}\\
+\end{blocks}
+
+% horizontal line
+\begin{center}
+    \noindent\color{black!50}\rule{.75\textwidth}{0.4pt}
+\end{center}
+
+\blockhead{Select communications}{\\\indice{706 citations\quad h-index 15} \vspace{-0.2cm}}
+\begin{blocks}[0.9]
+    \block{2024}{Talk}{United Nations Headquarters}{New York, USA}{Innovations in air quality monitoring}\\
+
+    \block{2024}{Talk}{Massachusetts Institute of Technology}{Boston, USA}{Detection of exoplanets using ground-based near-infrared instrumentation \\and robotic observatory systems}\\
+
+    \block{2024}{Paper}{\href{https://arxiv.org/pdf/2410.22140}{Infrared photometry with InGaAs detectors~ \ExternalLink}}{SPIE}{\underline{P P. Pedersen},~ D Queloz,~ L Garcia,~ \textit{et al.}\\
+        \indice{Designed, modelled, and integrated a novel near-infrared instrument, reducing white and red photometric noise over traditional systems.}}\\
+
+    \block{2024}{Paper}{\href{https://www.nature.com/articles/s41550-024-02271-2}{Detection of an Earth-sized exoplanet~ \ExternalLink}}{Nature Astronomy}{M Gillon,~ \underline{P P. Pedersen},~ B V. Rackham,~ \textit{et al.}\\
+        \indice{Discovery of one of the most promising rocky exoplanets for detailed emission spectroscopy characterization with JWST.}}\\
+
+    \block{2023}{Paper}{\href{https://academic.oup.com/mnras/article/518/2/2661/6795936}{Precise near-infrared photometry, accounting for water vapour~ \ExternalLink}}{MNRAS}{\underline{P P. Pedersen},~ C A. Murray,~ D Queloz,~ \textit{et al.}\\
+        \small\indice{Significantly increased the accuracy of ground-based light curves by removing atmospheric induced variability, in post. Enabling a RMS reduction of 53.8\%.}}\\
+\end{blocks}
+
+% horizontal line
+\begin{center}
+    \noindent\color{black!50}\rule{.75\textwidth}{0.4pt}
+\end{center}
+
+\blockhead{Skills}{}
+\begin{blocks}[0.9]
+    % \blockskill{Technical}{Python,~ Git,~ Docker,~ Linux,~ NextJS,~ PHP,~ SQL,~ open-source,\\CAD-CAM,~ embedded systems,~ instrumentation,~ ASCOM device drivers}\\
+    \blockskill{Technical}{
+        \skillrating{Python}{5} 
+        \skillrating{Git}{4} 
+        \skillrating{Docker}{4} 
+        \skillrating{Linux}{4}\\
+        \skillrating{NextJS}{4} 
+        \skillrating{PHP}{4} 
+        \skillrating{SQL}{4} 
+        \skillrating{CAD-CAM}{4}\\
+        \skillrating{Embedded Systems}{4} 
+        % \skillrating{Instrumentation}{5} 
+        \skillrating{ASCOM drivers}{5}}\\
+    % \blockskill{Hardware}{CAD-CAM,~ embedded systems,~ instrumentation,~ ASCOM device drivers}\\
+    \blockskill{Additional}{
+        \vspace{-\topsep} 
+        \begin{itemize}
+            \item Strong teamwork, leadership, and project management skills  
+            % \item Effective communication and cross-cultural collaboration
+            \item Spanish (C1 proficiency)  
+            \item Open-source, hackathons, and rapid prototyping
+        \end{itemize}}
+\end{blocks}
+
+\end{document}
