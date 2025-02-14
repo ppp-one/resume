@@ -2,8 +2,8 @@
 \usepackage[footskip=0.5cm, 
     top=2cm,      % Reduce top margin
     bottom=1.9cm,   % Reduce bottom margin
-    left=2.5cm,     % Reduce left margin
-    right=2.5cm,    % Reduce right margin
+    left=2.25cm,     % Reduce left margin
+    right=2.25cm,    % Reduce right margin
 ]{geometry}
 \usepackage{makecell}
 \usepackage{xcolor}
@@ -15,7 +15,6 @@
 \usepackage{fontawesome}
 \usepackage{enumitem}
 \usepackage{tikz}
-% \setlist{nolistsep}
 \setlist[itemize]{left=0.1em..1em, itemsep=0.1em, topsep=0.1em, parsep=0.1em}
 
 \newcommand{\ExternalLink}{%
@@ -77,13 +76,13 @@
 % structure of block
 \newcommand{\block}[5]{
     \makecell[tr]{{\color{black!70}\textbf{#2}}\\{\color{black!50}#1}}& 
-    \makecell[tl]{{\color{black!80}\textbf{#3}} \hspace{0pt} {\color{black!40}#4} \\ \parbox[t]{10cm}{#5}}
+    \makecell[tl]{{\color{black!80}\textbf{#3}} \hspace{0pt} {\color{black!40}#4} \\ \parbox[t]{10.5cm}{#5}}
 }
 
 % structure of skill block
 \newcommand{\blockskill}[2]{
     \makecell[tr]{{\color{black!50}#1}}& 
-    \makecell[tl]{\parbox[t]{10cm}{#2}}
+    \makecell[tl]{\parbox[t]{10.5cm}{#2}}
 }
 
 \newcommand{\header}[1]{{\color{black!60}\large\MakeUppercase{\textbf{#1}}}}
@@ -171,15 +170,15 @@
         \skillrating{Python}{5} 
         \skillrating{Git}{4} 
         \skillrating{Docker}{4} 
-        \skillrating{Linux}{4}\\
-        \skillrating{NextJS}{4} 
+        % \skillrating{Linux}{4}
+        \skillrating{NextJS}{4}\\
         \skillrating{PHP}{4} 
         \skillrating{SQL}{4} 
-        \skillrating{CAD-CAM}{4}\\
+        \skillrating{CAD-CAM}{4}
         \skillrating{Embedded Systems}{4} 
         % \skillrating{Instrumentation}{5} 
-        \skillrating{ASCOM drivers}{5}}\\
-    % \blockskill{Hardware}{CAD-CAM,~ embedded systems,~ instrumentation,~ ASCOM device drivers}\\
+        % \skillrating{ASCOM drivers}{5}
+        }\\
     \blockskill{Additional}{
         \vspace{-\topsep} 
         \begin{itemize}

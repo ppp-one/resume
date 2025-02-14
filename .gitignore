@@ -300,6 +300,6 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 
-#perso
-**/.ipynb_checkpoints
+# personal
 .DS_Store
+*CV.tex
