@@ -39,10 +39,16 @@
     }
 
 \newcommand{\skillrating}[2]{%
-    #1 ~~
-    \foreach \i in {1,...,5} {%
-        \tikz[baseline=-0.25em, scale=0.35] \draw[fill=black!\ifnum\i>#2 5\else 75\fi] (0,0) circle (4pt);
-    } \hspace{0.5em} % Add some space after the rating
+    #1~~%
+    \ifnum#2>0 % change this to < to show the ratings
+        % Do nothing
+        ~
+    \else
+        \foreach \i in {1,...,5} {%
+            \tikz[baseline=-0.25em, scale=0.35] \draw[fill=black!\ifnum\i>#2 5\else 75\fi] (0,0) circle (4pt);
+        }%
+        \hspace{0.5em} % Add some space after the rating
+    \fi
 }
 
 \hypersetup{
@@ -109,9 +115,9 @@
     \block{2022 -- now}{Postdoctoral Researcher}{ETH Zurich}{Switzerland}{
         \vspace{-\topsep} 
         \begin{itemize}
-            \item Developing robotic observatory control software, hardware, data processing/visualization tools for SPECULOOS and the ETH observatory
+            \item Developing robotic observatory control software, hardware, data processing, and public outreach for SPECULOOS and the ETH observatory
             \item Leading advancements in high-precision near-infrared photometry and instrumentation to detect and characterise new exoplanets
-            \item Supervising Masters research projects (5 completed)
+            \item Supervising Bachelor + Masters research projects (5 completed)
         \end{itemize}
     }\\
     \block{2018 -- now}{Co-founder}{\href{https://www.open-seneca.org/}{open-seneca \ExternalLink}}{United Kingdom}{
@@ -142,7 +148,7 @@
     \noindent\color{black!50}\rule{.75\textwidth}{0.4pt}
 \end{center}
 
-\blockhead{Select communications}{\\\indice{725 citations\quad h-index 15} \vspace{-0.2cm}}
+\blockhead{Select communications}{\\\indice{761 citations\quad h-index 16} \vspace{-0.2cm}}
 \begin{blocks}[0.9]
     \block{2024}{Talk}{United Nations Headquarters}{New York, USA}{Innovations in air quality monitoring}\\
 
@@ -169,23 +175,24 @@
     \blockskill{Technical}{
         \skillrating{Python}{5} 
         \skillrating{Git}{4} 
-        \skillrating{Docker}{4} 
+        \skillrating{Prototyping}{5} 
+        % \skillrating{Docker}{4} 
         % \skillrating{Linux}{4}
-        \skillrating{NextJS}{4}\\
-        \skillrating{PHP}{4} 
-        \skillrating{SQL}{4} 
-        \skillrating{CAD-CAM}{4}
-        \skillrating{Embedded Systems}{4} 
-        % \skillrating{Instrumentation}{5} 
+        % \skillrating{NextJS}{4}
+        % \skillrating{PHP}{4} 
+        % \skillrating{SQL}{4}
+        % \skillrating{CAD-CAM}{4}
+        % \skillrating{Embedded Systems}{4} 
+        \skillrating{Instrumentation}{5} 
         % \skillrating{ASCOM drivers}{5}
         }\\
     \blockskill{Additional}{
         \vspace{-\topsep} 
         \begin{itemize}
             \item Strong teamwork, leadership, and project management skills  
-            % \item Effective communication and cross-cultural collaboration
+            \item Effective communication and cross-cultural collaboration
             \item Spanish (C1 proficiency)  
-            \item Open-source, hackathons, and rapid prototyping
+            % \item Open-source, hackathons, and rapid prototyping
         \end{itemize}}
 \end{blocks}
 
