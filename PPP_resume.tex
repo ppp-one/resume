@@ -12,7 +12,7 @@
 \usepackage{setspace}
 \usepackage{hyperref}
 % \usepackage{showframe}  % Add this line to show margins
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage{enumitem}
 \usepackage{tikz}
 \setlist[itemize]{left=0.1em..1em, itemsep=0.1em, topsep=0.1em, parsep=0.1em}
@@ -68,15 +68,19 @@
 \small
 
 \begin{center}
-    {\huge Peter Pihlmann Pedersen} \\
+    {\LARGE Peter Pihlmann Pedersen} \\
     \vspace{0.1cm}
-    {\small\color{black!40}{Astrophysicist, Research Software \& Hardware Engineering}} \\
+    {\small\color{black!40}{6+ years experience developing full-stack applications for\\ environmental monitoring and scientific instrumentation}} \\
     \vspace{0.35cm}
     {\faEnvelope\hspace{2pt}  \href{mailto:peter@ppp.one}{peter@ppp.one} 
     \hspace{8pt} 
     \href{https://github.com/ppp-one}{\faGithub\hspace{2pt}ppp-one}}
     \hspace{8pt}
     {\faGlobe\hspace{2pt} \href{https://www.ppp.one/}{ppp.one}}
+    \hspace{8pt}
+    {\faLocationArrow\hspace{2pt} {Zurich, Switzerland}}
+    \hspace{8pt}
+    {\faPassport\hspace{2pt} {EU Citizen}}    
 \end{center}
 
 % structure of block
@@ -123,7 +127,7 @@
     \block{2018 -- now}{Co-founder}{\href{https://www.open-seneca.org/}{open-seneca \ExternalLink}}{United Kingdom}{
         \vspace{-\topsep}
         \begin{itemize}
-            \item Engineered air quality monitoring networks -- developed core aspects of the hardware, software, and data analysis
+            \item Engineered air quality monitoring networks -- developed core aspects of the hardware, software, and data analysis for sustainability targeted projects
             \item Led international collaborative projects, with a focus on the Global South
         \end{itemize}
     }\\
@@ -148,45 +152,25 @@
     \noindent\color{black!50}\rule{.75\textwidth}{0.4pt}
 \end{center}
 
-\blockhead{Select communications}{\\\indice{761 citations\quad h-index 16} \vspace{-0.2cm}}
-\begin{blocks}[0.9]
-    \block{2024}{Talk}{United Nations Headquarters}{New York, USA}{Innovations in air quality monitoring}\\
-
-    \block{2024}{Talk}{Massachusetts Institute of Technology}{Boston, USA}{Detection of exoplanets using ground-based near-infrared instrumentation \\and robotic observatory systems}\\
-
-    \block{2024}{Paper}{\href{https://arxiv.org/pdf/2410.22140}{Infrared photometry with InGaAs detectors~ \ExternalLink}}{SPIE}{\underline{P P. Pedersen},~ D Queloz,~ L Garcia,~ \textit{et al.}\\
-        \indice{Designed, modelled, and integrated a novel near-infrared instrument, reducing white and red photometric noise over traditional systems.}}\\
-
-    \block{2024}{Paper}{\href{https://www.nature.com/articles/s41550-024-02271-2}{Detection of an Earth-sized exoplanet~ \ExternalLink}}{Nature Astronomy}{M Gillon,~ \underline{P P. Pedersen},~ B V. Rackham,~ \textit{et al.}\\
-        \indice{Discovery of one of the most promising rocky exoplanets for detailed emission spectroscopy characterization with JWST.}}\\
-
-    \block{2023}{Paper}{\href{https://academic.oup.com/mnras/article/518/2/2661/6795936}{Precise near-infrared photometry, accounting for water vapour~ \ExternalLink}}{MNRAS}{\underline{P P. Pedersen},~ C A. Murray,~ D Queloz,~ \textit{et al.}\\
-        \small\indice{Significantly increased the accuracy of ground-based light curves by removing atmospheric induced variability, in post. Enabling a RMS reduction of 53.8\%.}}\\
-\end{blocks}
-
-% horizontal line
-\begin{center}
-    \noindent\color{black!50}\rule{.75\textwidth}{0.4pt}
-\end{center}
-
 \blockhead{Skills}{}
 \begin{blocks}[0.9]
-    % \blockskill{Technical}{Python,~ Git,~ Docker,~ Linux,~ NextJS,~ PHP,~ SQL,~ open-source,\\CAD-CAM,~ embedded systems,~ instrumentation,~ ASCOM device drivers}\\
-    \blockskill{Technical}{
-        \skillrating{Python}{5} 
-        \skillrating{Git}{4} 
-        \skillrating{Prototyping}{5} 
-        % \skillrating{Docker}{4} 
-        % \skillrating{Linux}{4}
-        % \skillrating{NextJS}{4}
-        % \skillrating{PHP}{4} 
-        % \skillrating{SQL}{4}
-        % \skillrating{CAD-CAM}{4}
-        % \skillrating{Embedded Systems}{4} 
-        \skillrating{Instrumentation}{5} 
-        % \skillrating{ASCOM drivers}{5}
-        }\\
-    \blockskill{Additional}{
+    \blockskill{Programming}{\textbf{Python} (pandas, numpy, scipy, FastAPI),~\textbf{Javascript} (NextJS, vanilla),\\\textbf{CSS} (Tailwind, vanilla),~\textbf{C++} (Arduino, STM32),~ \textbf{C\#} (.NET),~ \textbf{PHP},\\\textbf{SQL} (MySQL, SQLite),~ nginx,~ Docker,~ Linux,~ Git}\\
+    \blockskill{Additional}{Data pipelines,~ hardware-software integration,~ time-series analysis,\\ atmospheric \& geospatial data processing}\\
+    \blockskill{Select coding projects}{
+        \vspace{-\topsep} 
+        \begin{itemize}
+            \item Astra: Robotic observatory control software (Python, FastAPI, SQLite)
+            \item \href{https://maps.open-seneca.org/}{open-seneca maps~ \ExternalLink}: Air quality maps (Python, NextJS, C++)
+            \item \href{https://weatherflip.com}{weatherflip.com~ \ExternalLink}: Weather search engine (FastAPI, NextJS, Tailwind CSS)
+        \end{itemize}}\\
+    % \blockskill{Domain Expertise}{
+    %     \vspace{-\topsep} 
+    %     \begin{itemize}
+    %         \item Environmental monitoring \& atmospheric data analysis
+    %         \item Global sensor network deployment \& observatory control systems
+    %         \item Research-to-production software translation
+    %     \end{itemize}}\\
+    \blockskill{Misc.}{
         \vspace{-\topsep} 
         \begin{itemize}
             \item Strong teamwork, leadership, and project management skills  
@@ -195,5 +179,30 @@
             % \item Open-source, hackathons, and rapid prototyping
         \end{itemize}}
 \end{blocks}
+
+% horizontal line
+\begin{center}
+    \noindent\color{black!50}\rule{.75\textwidth}{0.4pt}
+\end{center}
+
+\blockhead{Select communications}{\\\indice{761 citations\quad h-index 16} \vspace{-0.2cm}}
+\begin{blocks}[0.9]
+    \block{2024}{Talk}{United Nations Headquarters}{New York, USA}{Innovations in air quality monitoring}\\
+
+    \block{2024}{Talk}{MIT}{Boston, USA}{Detection of exoplanets using ground-based near-infrared instrumentation \\and robotic observatory systems}\\
+
+    % \block{2024}{Paper}{\href{https://arxiv.org/pdf/2410.22140}{Infrared photometry with InGaAs detectors~ \ExternalLink}}{SPIE}{\underline{P P. Pedersen},~ D Queloz,~ L Garcia,~ \textit{et al.}\\
+    %     \indice{Designed, modelled, and integrated a novel near-infrared instrument, reducing white and red photometric noise over traditional systems.}}\\
+
+    % \block{2024}{Paper}{\href{https://www.nature.com/articles/s41550-024-02271-2}{Detection of an Earth-sized exoplanet~ \ExternalLink}}{Nature Astronomy}{M Gillon,~ \underline{P P. Pedersen},~ B V. Rackham,~ \textit{et al.}\\
+    %     \indice{Discovery of one of the most promising rocky exoplanets for detailed emission spectroscopy characterization with JWST.}}\\
+
+    \block{2023}{Paper}{\href{https://academic.oup.com/mnras/article/518/2/2661/6795936}{Precise photometry, accounting for atmospheric water vapour~ \ExternalLink}}{MNRAS}{\underline{P P. Pedersen},~ C A. Murray,~ D Queloz,~ \textit{et al.}\\
+        \small\indice{Significantly increased the accuracy of ground-based light curves by removing atmospheric induced variability, in post. Enabling a RMS reduction of 53.8\%.}}\\
+\end{blocks}
+
+
+
+
 
 \end{document}
